@@ -11,19 +11,17 @@ public class Hello {
     public static void p(boolean val) {
         System.out.println(val);
     }
-    public static boolean memberIsLikelyToAttendMeeting(int grade, double meetings) {
-        if(grade >= 9 && grade <= 12) {
-            if(meetings >= 1) {
-                return true;
-            }
-            else { return false; }
-        }
-        else { return false; }
-    }
     public static void main(String[] args) {
-        p(memberIsLikelyToAttendMeeting(3, 4.5));
-        p(memberIsLikelyToAttendMeeting(12, 8.9));//damm how that even possiable
-        p(memberIsLikelyToAttendMeeting(8, 0.0000003));
-        p(memberIsLikelyToAttendMeeting(10, 0.0000003));
+        Person Ben = new Person("Ben", 10, 1.4);
+        Person John = new Person("John", 5, 7.0);
+        Person Rain = new Person("Rain", 9, 8.9);//how she be doin that 8.9 meetings a week lmfao thats some dedication
+        Person Jaco = new Person("Jaco", 9, 1);
+        Person Cindy = new Person("Cindy", 9, 0);
+
+        p("Is " + Ben.name + " going to attend?: " + (Ben.memberIsLikelyToAttendMeeting() ? "yes" : "no"));
+        p("Is " + John.name + " going to attend?: " + (John.memberIsLikelyToAttendMeeting() ? "yes" : "no"));
+        p("Is " + Rain.name + " going to attend?: " + (Rain.memberIsLikelyToAttendMeeting() ? "yes" : "no"));
+        p("Is " + Jaco.name + " going to attend?: " + (Jaco.memberIsLikelyToAttendMeeting() ? "yes" : "no"));
+        p("Is " + Cindy.name + " going to attend?: " + (Cindy.memberIsLikelyToAttendMeeting() ? "yes" : "no"));
     }
 }
